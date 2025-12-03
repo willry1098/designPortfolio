@@ -189,7 +189,7 @@ export const projects: Project[] = [
       },
       {
         type: 'video',
-        video: '/chapel-demo.mp4',
+        video: 'https://drive.google.com/file/d/1tt00J14wmYGi7BEGATG3ckOv6nQxuQbx/preview',
         videoAlt: 'Teaching demonstration'
       },
       {
