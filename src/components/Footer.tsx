@@ -1,8 +1,11 @@
-@@ .. @@
-           {/* Logo */}
-           <img 
--            src="/Screenshot 2024-10-29 at 17.02.17.png" 
-            alt="William Ryan Logo" 
-             alt="William Anderson Logo" 
-             className="w-12 h-12 opacity-30"
-           />
+const Footer = () => {
+  return (
+    <footer className="bg-gray-900 text-white py-8 mt-16">
+      <div className="container mx-auto px-4 text-center">
+        <p>&copy; 2024 William Ryan. All rights reserved.</p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
