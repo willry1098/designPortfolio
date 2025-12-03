@@ -172,35 +172,45 @@ const ProjectDetailPage: React.FC = () => {
         );
 
       case 'video':
+        const isExternalVideo = section.video.startsWith('http');
         return (
           <div key={index} className="w-full py-12">
             <div className="max-w-5xl mx-auto px-6">
-              <video
-                className="w-full rounded-lg shadow-lg"
-                loop
-                muted
-                playsInline
-                ref={(el) => {
-                  if (el) {
-                    const observer = new IntersectionObserver(
-                      (entries) => {
-                        entries.forEach((entry) => {
-                          if (entry.isIntersecting) {
-                            el.play();
-                          } else {
-                            el.pause();
-                          }
-                        });
-                      },
-                      { threshold: 0.5 }
-                    );
-                    observer.observe(el);
-                  }
-                }}
-              >
-                <source src={section.video} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              {isExternalVideo ? (
+                <iframe
+                  src={section.video}
+                  className="w-full rounded-lg shadow-lg aspect-video"
+                  allow="autoplay"
+                  allowFullScreen
+                />
+              ) : (
+                <video
+                  className="w-full rounded-lg shadow-lg"
+                  loop
+                  muted
+                  playsInline
+                  ref={(el) => {
+                    if (el) {
+                      const observer = new IntersectionObserver(
+                        (entries) => {
+                          entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                              el.play();
+                            } else {
+                              el.pause();
+                            }
+                          });
+                        },
+                        { threshold: 0.5 }
+                      );
+                      observer.observe(el);
+                    }
+                  }}
+                >
+                  <source src={section.video} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )}
             </div>
           </div>
         );
