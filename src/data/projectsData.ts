@@ -278,7 +278,7 @@ export const projects: Project[] = [
         type: 'split',
         title: 'Character-Driven Stories',
         content: 'Each player character has personal arcs woven into the larger narrative. I work with players to develop their backstories into meaningful campaign elements, giving each character moments to shine and choices that resonate with their personal journey.',
-        image: 'https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg?auto=compress&cs=tinysrgb&w=800',
+        image: '/dnd.jpeg',
         imageAlt: 'Character development',
         imagePosition: 'right'
       },
