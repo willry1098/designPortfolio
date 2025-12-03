@@ -23,8 +23,8 @@ const Bookshelf: React.FC = () => {
       title: "The Chronicals of Narnia",
       author: "C.S. Lewis",
       cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1661032875i/11127.jpg?auto=compress&cs=tinysrgb&w=300&h=400",
-      summary: "A mythic journey through a world where children's moral choices mirror divine truths, The Chronicles of Narnia transforms Christian theology into imaginative allegory, blending innocence, temptation, sacrifice, and redemption into the language of wonder.",
-      completedDate: "Currently Reading",
+      summary: "I suspect that we all, in time, come to consider the true myth. Christian allegory provides a magical framework to Narnia, and I especially appreciate the book-ending theme of worlds within worlds. I suspect that our reality is not so finite as we percieve, and I enjoy exploring the possibility of fantasy. I may not yet be ready to welcome Christ back into my life, but I hope that, if I continue to act according to my own will while holding good in my heart, I will be delivered from Evil and allowed to experience all that the true kingdom has to offer.",
+      completedDate: "November 2025",
       category: "Fiction"
     },
     {
@@ -33,7 +33,7 @@ const Bookshelf: React.FC = () => {
       author: "Silvio Lorusso",
       cover: "https://www.setmargins.press/wp-content/uploads/2023/07/ABE_20231122_Whatdesigncantdo_042-2500x0-c-default.jpg?auto=compress&cs=tinysrgb&w=300&h=400",
       summary: "A pessimistic approach to design.",
-      completedDate: "Currently Reading",
+      completedDate: "November 2025",
       category: "Design"
     },
     {

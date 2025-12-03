@@ -189,7 +189,7 @@ export const projects: Project[] = [
       },
       {
         type: 'video',
-        video: `${import.meta.env.BASE_URL}chapel-demo.mp4`,
+        video: `${import.meta.env.BASE_URL}teachingTestimonials.mp4`,
         videoAlt: 'Teaching demonstration'
       },
       {
@@ -278,7 +278,7 @@ export const projects: Project[] = [
         type: 'split',
         title: 'Character-Driven Stories',
         content: 'Each player character has personal arcs woven into the larger narrative. I work with players to develop their backstories into meaningful campaign elements, giving each character moments to shine and choices that resonate with their personal journey.',
-        image: '/dnd.jpeg',
+        image: `${import.meta.env.BASE_URL}dnd.jpeg`,
         imageAlt: 'Character development',
         imagePosition: 'right'
       },
