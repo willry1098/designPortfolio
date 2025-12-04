@@ -121,7 +121,7 @@ const Bookshelf: React.FC = () => {
       id: 11,
       title: "Thinking, Fast and Slow",
       author: "Daniel Kahneman",
-      cover: "https://www.punkt.ch/repoimg/2814-prod_main-Kahneman.jpg.jpg&cs=tinysrgb&w=300&h=400",
+      cover: "https://m.media-amazon.com/images/I/61fdrEuPJwL._AC_UF1000,1000_QL80_.jpg&cs=tinysrgb&w=300&h=400",
       summary: "Kahneman's insights into cognitive biases have profoundly influenced my user research methodology. Understanding System 1 and System 2 thinking helps me design interfaces that work with, rather than against, human psychology. Essential reading for any designer working on complex systems.",
       completedDate: "Currently Reading",
       category: "Psychology"
