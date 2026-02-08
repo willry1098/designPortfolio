@@ -19,6 +19,23 @@ const Bookshelf: React.FC = () => {
 
   const books: Book[] = [
     {
+      id: 14,
+      title: "Stranger in a Strange Land",
+      author: "Robert A. Heinlein",
+      cover: "https://target.scene7.com/is/image/Target/GUEST_e503b92b-843c-4ee3-9687-2dad78f76439?wid=300&hei=300&fmt=pjpeg?auto=compress&cs=tinysrgb&w=300&h=400",
+      summary: "I do not grok this story, but waiting is not yet full. Heinlein exposes so much of what it means to be human and to struggle with the concept of God through the lens of an off-worlder, yet the greatest wisdom still comes from a crotchety old man. I sense this book is a great goodness, and I look forward to how my perception of it changes as I grow.",
+      completedDate: "January 2026",
+      category: "Fiction"
+    },{
+      id: 13,
+      title: "The Catcher in the Rye",
+      author: "J.D. Salinger",
+      cover: "https://target.scene7.com/is/image/Target/GUEST_229f3fe4-ab67-4589-ad8b-45b6378be7a6?auto=compress&cs=tinysrgb&w=300&h=400",
+      summary: "How many years later have I now returned to find a new book within the same pages. No longer do I find a lousy anti-hero with whom to celebrate the shortcomings of institutions. Rather, I'm challenged to consider my own relationship with inhabited authority and left to wonder if I've been a good role model for the boys I've taught.",
+      completedDate: "January 2026",
+      category: "Fiction"
+    },
+    {
       id: 12,
       title: "The Chronicals of Narnia",
       author: "C.S. Lewis",
@@ -121,7 +138,7 @@ const Bookshelf: React.FC = () => {
       id: 11,
       title: "Thinking, Fast and Slow",
       author: "Daniel Kahneman",
-      cover: "https://m.media-amazon.com/images/I/61fdrEuPJwL._AC_UF1000,1000_QL80_.jpg&cs=tinysrgb&w=300&h=400",
+      cover: "https://dansilvestre.com/wp-content/uploads/2021/04/71HXn7NT7DL.jpg&cs=tinysrgb&w=300&h=400",
       summary: "Kahneman's insights into cognitive biases have profoundly influenced my user research methodology. Understanding System 1 and System 2 thinking helps me design interfaces that work with, rather than against, human psychology. Essential reading for any designer working on complex systems.",
       completedDate: "Currently Reading",
       category: "Psychology"
