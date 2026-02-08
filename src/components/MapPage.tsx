@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Loader2 } from 'lucide-react';
 import InteractiveMap from './InteractiveMap';
 import { citiesService, City } from '../lib/supabase';
+import { getAssetPath } from '../lib/assets';
 
 const MapPage: React.FC = () => {
   const [cities, setCities] = useState<City[]>([]);
@@ -32,7 +33,7 @@ const MapPage: React.FC = () => {
     name: city.name,
     x: Number(city.x),
     y: Number(city.y),
-    bannerImage: city.banner_image,
+    bannerImage: getAssetPath(city.banner_image),
     description: city.description,
     ruler: city.ruler,
     ideology: city.ideology,
@@ -79,7 +80,7 @@ const MapPage: React.FC = () => {
       </div>
 
       <InteractiveMap
-        mapImage="/cercaMareMap.jpeg"
+        mapImage={getAssetPath('/cercaMareMap.jpeg')}
         cities={mapCities}
       />
     </div>
