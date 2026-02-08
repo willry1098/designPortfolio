@@ -7,8 +7,8 @@ const AboutPage: React.FC = () => {
     // This would trigger the download of your PDF resume
     // You'll need to add your resume PDF to the public folder
     const link = document.createElement('a');
-    link.href = `${import.meta.env.BASE_URL}resume.pdf`; // You'll need to add this file
-    link.download = 'William_Ryan_Resume.pdf';
+    link.href = `${import.meta.env.BASE_URL}RYAN_WILLIAM_designResume.pdf`; // You'll need to add this file
+    link.download = 'RYAN_WILLIAM_designResume.pdf';
     link.click();
   };
 
