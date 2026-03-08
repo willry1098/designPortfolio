@@ -19,13 +19,29 @@ const Bookshelf: React.FC = () => {
 
   const books: Book[] = [
     {
+      id: 16,
+      title: "Dark Matter",
+      author: "Blake Crouch",
+      cover: "https://atomicbooks.com/cdn/shop/products/darkmatter.jpg?v=1494545076&width=1024?auto=compress&cs=tinysrgb&w=300&h=400",
+      summary: "The writing complexity may not inspire the next virtuoso to pick up his pen, but the story is an excellent one Crouch manages to avoid incoherence which threatens any time travel/parallel narrative setting and deliver a compelling adventure. His dialogue is natural if rough, but doesn’t stand in the way of helping us ask “what would I do to get back home again.“ While this book doesn’t stand a top of my list of sci-fi grades, I sure did lose sleep as I couldn’t wait to read the next chapter.",
+      completedDate: "March 2026",
+      category: "Sci-Fi"
+    },{
+      id: 15,
+      title: "Predictably Irrational",
+      author: "Dan Ariely",
+      cover: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1255573980i/1713426.jpg?auto=compress&cs=tinysrgb&w=300&h=400",
+      summary: "I found this book to be a significantly watered-down version of Thinking: Fast and Slow. Though the narrative recounts of the study were entertaining, I felt they offered less insight into true behavioral understanding than other cases presented in Sapiens or TFaS. Nevertheless, I enjoyed the read.",
+      completedDate: "March 2026",
+      category: "Psycology"
+    },{
       id: 14,
       title: "Stranger in a Strange Land",
       author: "Robert A. Heinlein",
       cover: "https://target.scene7.com/is/image/Target/GUEST_e503b92b-843c-4ee3-9687-2dad78f76439?wid=300&hei=300&fmt=pjpeg?auto=compress&cs=tinysrgb&w=300&h=400",
       summary: "I do not grok this story, but waiting is not yet full. Heinlein exposes so much of what it means to be human and to struggle with the concept of God through the lens of an off-worlder, yet the greatest wisdom still comes from a crotchety old man. I sense this book is a great goodness, and I look forward to how my perception of it changes as I grow.",
       completedDate: "January 2026",
-      category: "Fiction"
+      category: "Sci-Fi"
     },{
       id: 13,
       title: "The Catcher in the Rye",
@@ -96,7 +112,7 @@ const Bookshelf: React.FC = () => {
       cover: "https://m.media-amazon.com/images/I/91t2EXhrJwL._SL1500_.jpg?auto=compress&cs=tinysrgb&w=300&h=400",
       summary: "A hilarious, absurdist journey through space that reminds us not to take anything too seriously.",
       completedDate: "September 2025",
-      category: "Fiction"
+      category: "Sci-Fi"
     },
     {
       id: 7,
