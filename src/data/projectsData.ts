@@ -1,7 +1,7 @@
 import { getAssetPath } from '../lib/assets';
 
 export interface ProjectSection {
-  type: 'text' | 'image' | 'split' | 'quote' | 'stats' | 'video';
+  type: 'text' | 'image' | 'split' | 'quote' | 'stats' | 'video' | 'carousel';
   title?: string;
   subtitle?: string;
   content?: string;
@@ -13,6 +13,7 @@ export interface ProjectSection {
   stats?: Array<{ label: string; value: string }>;
   video?: string;
   videoAlt?: string;
+  images?: Array<{ src: string; alt: string }>;
 }
 
 export interface Project {
@@ -38,6 +39,80 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    id: 'pampered-chef-showcase',
+    title: 'Product Showcase (Pampered Chef)',
+    subtitle: '2026 New-Product Release Showcase and Expo Set Design',
+    category: 'Event & Spatial Design',
+    heroImage: getAssetPath('/pamperedChef-hero.jpg'),
+    overview: 'In preparation for the 2026 Pampered Conference (Pampered Chef\'s annual consultant expo, new product release, and training conference) I joined a team of five designers to imagine, organize, and install over a dozen vignettes to relate new products, stories, and ideas to Pampered Chef consultants. Over the course of two weeks, we worked at Pampered Chef HQ and McCormick Place in Chicago to install the showcase.',
+    role: 'Design Assistant',
+    duration: '2 Weeks',
+    team: 'Pampered Chef Marketing Specialist, Interior Design Specialist, 3 Design Assistants',
+    tags: ['Set Design', 'Event Design', 'Retail Experience', 'Team Collaboration'],
+    hcdPhases: {},
+    outcome: '',
+    sections: [
+      {
+        type: 'split',
+        title: 'When Less is More',
+        content: 'The most important lesson I took away from working on the Pampered Conference was learning to balance different levels of user attention. While a user may be able to take in large amounts of surface-level information about a space when they first enter (quickly making snap judgements about which spaces look intriguing or inviting), they can only focus on a small handful of stimuli when engaging in detailed exploration. Thus, we tried to showcase three or fewer products per moment when we wanted deeper engagement, and used large statement pieces to capture and direct user attention as they moved about different spaces.',
+        image: getAssetPath('/pamperedChef-vignette-yellow.jpg'),
+        imageAlt: 'A curated product vignette styled with just a few featured items',
+        imagePosition: 'right'
+      },
+      {
+        type: 'split',
+        title: '"It all starts with a plan."',
+        content: 'This year, the Pampered Conference returned to Chicago (having been held in Rosemont, IL for the last few years), so our first step was to design a floorplan based off the East Building in McCormick Place. Within the showroom, we identified three key needs of our consultants (users): new product showcases to display products for the upcoming holiday seasons, interactive demos to allow consultants to get their hands on the products and gain first-person experience, and video creation booths to allow consultants to create their own content to bring the stories back to their in-person and digital communities. Using the provided floorplan, we blocked out areas to serve each of these user needs and facilitate user flows and storytelling in space.',
+        image: getAssetPath('/pamperedChef-floorplan.jpg'),
+        imageAlt: 'Annotated floorplan of the McCormick Place East Building showroom',
+        imagePosition: 'left'
+      },
+      {
+        type: 'split',
+        title: 'Designing A Centerpiece',
+        content: 'Every good set designer knows that a powerful set needs a noteworthy centerpiece. For the 2026 Pampered Conference, this meant a four-part wall arch that would provide us ample room to display products, craft segmented stories in space, and allow consultants to explore the showroom floor in multiple dimensions, deepening their sense of immersion and connection to the space. Working with PC\'s production company, we created the arch-wall to anchor our different dining vignettes in the center of the showroom floor (Everyday Spaces [Green]; Holiday Gifting [Purple]; Seasonal Living [Yellow]; Family Feast [Gray]).',
+        image: getAssetPath('/pamperedChef-archwall-diagram.jpg'),
+        imageAlt: 'Color-coded diagram of the four-part arch wall centerpiece design',
+        imagePosition: 'right'
+      },
+      {
+        type: 'split',
+        title: 'The Setup for the Setup',
+        content: 'While it might look cluttered when tucked side-to-side in the PC Distribution Center, the scene staging we did at home office was essential in getting us set up to move 55 pallets worth of product, sets, and props into McCormick center and complete our setup in just two days. In our warehouse dry run, we organized each of our vignettes to identify appropriate products, props, and layouts. Each of these sets were then packed together, placed on pallets, and shipped down to the convention center.',
+        image: getAssetPath('/pamperedChef-warehouse-staging.jpg'),
+        imageAlt: 'Vignettes staged side-by-side at the Pampered Chef Distribution Center warehouse',
+        imagePosition: 'left'
+      },
+      {
+        type: 'split',
+        title: 'Transforming Spaces: Installation Day',
+        content: 'It is incredible how quickly an empty room can become a moment of excitement, joy, and exploration with the right planning. We arrived at McCormick Convention Center where we partnered with union contractors for pipe & drape, AV & electrical, and docking & loading to rapidly move in our pallets and begin transforming the space.',
+        image: getAssetPath('/pamperedChef-installation-early.jpg'),
+        imageAlt: 'An empty convention hall in the early stages of installation',
+        imagePosition: 'right'
+      },
+      {
+        type: 'split',
+        title: 'Making a House Ballroom a Home',
+        content: 'In just two days, we unloaded and re-staged over a dozen different vignettes in space, demo stations, and video content creation booths, all stocked with Pampered Chef products to help our consultants envision bringing PC into their homes so that they may eventually help customers to do the same.',
+        image: getAssetPath('/pamperedChef-installation-complete.jpg'),
+        imageAlt: 'The showroom floor fully staged with vignettes, demo stations, and lounge areas',
+        imagePosition: 'left'
+      },
+      {
+        type: 'carousel',
+        images: [
+          { src: getAssetPath('/pamperedChef-carousel-1.jpg'), alt: 'Placeholder photo — empty convention hall during early installation' },
+          { src: getAssetPath('/pamperedChef-carousel-2.jpg'), alt: 'Placeholder photo — team members setting up product display tables' },
+          { src: getAssetPath('/pamperedChef-carousel-3.jpg'), alt: 'Placeholder photo — the Family Feast vignette styled in yellow' },
+          { src: getAssetPath('/pamperedChef-carousel-4.jpg'), alt: 'Placeholder photo — a black shelving unit styled with kitchen products' },
+          { src: getAssetPath('/pamperedChef-carousel-5.jpg'), alt: 'Placeholder photo — close-up styling detail on the yellow vignette wall' }
+        ]
+      }
+    ]
+  },
   {
     id: 'chapel-row-markers',
     title: 'Chapel Row Markers',

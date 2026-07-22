@@ -88,7 +88,7 @@ const AboutPage: React.FC = () => {
               
               <div>
                 <h3 className="font-semibold text-deep-indigo mb-2">Interests</h3>
-                <p>Human-Computer Interaction, Design Systems, Storytelling</p>
+                <p>Exhibit Design, User Journies, Human-Computer Interaction, Storytelling</p>
               </div>
             </div>
 
