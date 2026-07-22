@@ -1,13 +1,21 @@
-import { createClient } from '@supabase/supabase-js';
+import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
 if (!supabaseUrl || !supabaseAnonKey) {
-  throw new Error('Missing Supabase environment variables');
+  console.error('Missing Supabase environment variables — the map/cities feature will be unavailable.');
 }
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+export const supabase: SupabaseClient | null =
+  supabaseUrl && supabaseAnonKey ? createClient(supabaseUrl, supabaseAnonKey) : null;
+
+function requireClient(): SupabaseClient {
+  if (!supabase) {
+    throw new Error('Supabase is not configured');
+  }
+  return supabase;
+}
 
 export interface City {
   id: string;
@@ -25,7 +33,7 @@ export interface City {
 
 export const citiesService = {
   async getAllCities(): Promise<City[]> {
-    const { data, error } = await supabase
+    const { data, error } = await requireClient()
       .from('cities')
       .select('*')
       .order('name', { ascending: true });
@@ -35,7 +43,7 @@ export const citiesService = {
   },
 
   async getCityById(id: string): Promise<City | null> {
-    const { data, error } = await supabase
+    const { data, error } = await requireClient()
       .from('cities')
       .select('*')
       .eq('id', id)
@@ -46,7 +54,7 @@ export const citiesService = {
   },
 
   async createCity(city: Omit<City, 'id' | 'created_at' | 'updated_at'>): Promise<City> {
-    const { data, error } = await supabase
+    const { data, error } = await requireClient()
       .from('cities')
       .insert([city])
       .select()
@@ -57,7 +65,7 @@ export const citiesService = {
   },
 
   async updateCity(id: string, city: Partial<Omit<City, 'id' | 'created_at' | 'updated_at'>>): Promise<City> {
-    const { data, error } = await supabase
+    const { data, error } = await requireClient()
       .from('cities')
       .update({ ...city, updated_at: new Date().toISOString() })
       .eq('id', id)
@@ -70,7 +78,7 @@ export const citiesService = {
   },
 
   async deleteCity(id: string): Promise<void> {
-    const { error } = await supabase
+    const { error } = await requireClient()
       .from('cities')
       .delete()
       .eq('id', id);
