@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Gamepad2, Clock, Calendar } from 'lucide-react';
+import { getAssetPath } from '../lib/assets';
 
 interface SteamGame {
   appid: number;
@@ -19,30 +20,19 @@ const SteamGames: React.FC = () => {
   useEffect(() => {
     const fetchSteamGames = async () => {
       try {
-        const steamId = '76561198088720071';
-
-        // Use Supabase Edge Function to proxy Steam API request
-        const apiUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/steam-games?steamId=${steamId}`;
-
-        const response = await fetch(apiUrl, {
-          headers: {
-            'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
-            'Content-Type': 'application/json',
-          },
-        });
+        // Data is refreshed periodically by a GitHub Action (scripts/fetch-steam-games.mjs)
+        // and committed as a static file, rather than fetched live per-visitor.
+        const response = await fetch(getAssetPath('steam-games.json'));
 
         if (!response.ok) {
-          const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
-          console.error('Steam API Response Error:', response.status, errorData);
-          throw new Error(`Failed to fetch Steam games: ${errorData.error || response.statusText}`);
+          throw new Error(`Failed to fetch Steam games: ${response.status} ${response.statusText}`);
         }
         const data = await response.json();
-        console.log('Steam games fetched successfully:', data);
         setGames(data.games || []);
-        
+
       } catch (err) {
         console.error('Error fetching Steam games:', err);
-        setError('Using sample data (Edge function not available)');
+        setError('Unable to load game data right now');
         // Fallback to mock data for demonstration
         setGames([
           {
