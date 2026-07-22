@@ -2,148 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BookOpen, X } from 'lucide-react';
 import SteamGames from './SteamGames';
-
-interface Book {
-  id: number;
-  title: string;
-  author: string;
-  cover: string;
-  summary: string;
-  completedDate: string;
-  category: string;
-}
+import { books, type Book } from '../data/booksData';
 
 const Bookshelf: React.FC = () => {
   const [selectedBook, setSelectedBook] = useState<Book | null>(null);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
-
-  const books: Book[] = [
-    {
-      id: 14,
-      title: "Stranger in a Strange Land",
-      author: "Robert A. Heinlein",
-      cover: "https://target.scene7.com/is/image/Target/GUEST_e503b92b-843c-4ee3-9687-2dad78f76439?wid=300&hei=300&fmt=pjpeg?auto=compress&cs=tinysrgb&w=300&h=400",
-      summary: "I do not grok this story, but waiting is not yet full. Heinlein exposes so much of what it means to be human and to struggle with the concept of God through the lens of an off-worlder, yet the greatest wisdom still comes from a crotchety old man. I sense this book is a great goodness, and I look forward to how my perception of it changes as I grow.",
-      completedDate: "January 2026",
-      category: "Fiction"
-    },{
-      id: 13,
-      title: "The Catcher in the Rye",
-      author: "J.D. Salinger",
-      cover: "https://target.scene7.com/is/image/Target/GUEST_229f3fe4-ab67-4589-ad8b-45b6378be7a6?auto=compress&cs=tinysrgb&w=300&h=400",
-      summary: "How many years later have I now returned to find a new book within the same pages. No longer do I find a lousy anti-hero with whom to celebrate the shortcomings of institutions. Rather, I'm challenged to consider my own relationship with inhabited authority and left to wonder if I've been a good role model for the boys I've taught.",
-      completedDate: "January 2026",
-      category: "Fiction"
-    },
-    {
-      id: 12,
-      title: "The Chronicals of Narnia",
-      author: "C.S. Lewis",
-      cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1661032875i/11127.jpg?auto=compress&cs=tinysrgb&w=300&h=400",
-      summary: "I suspect that we all, in time, come to consider the true myth. Christian allegory provides a magical framework to Narnia, and I especially appreciate the book-ending theme of worlds within worlds. I suspect that our reality is not so finite as we percieve, and I enjoy exploring the possibility of fantasy. I may not yet be ready to welcome Christ back into my life, but I hope that, if I continue to act according to my own will while holding good in my heart, I will be delivered from Evil and allowed to experience all that the true kingdom has to offer.",
-      completedDate: "November 2025",
-      category: "Fiction"
-    },
-    {
-      id: 1,
-      title: "What Design Can't Do",
-      author: "Silvio Lorusso",
-      cover: "https://www.setmargins.press/wp-content/uploads/2023/07/ABE_20231122_Whatdesigncantdo_042-2500x0-c-default.jpg?auto=compress&cs=tinysrgb&w=300&h=400",
-      summary: "A pessimistic approach to design.",
-      completedDate: "November 2025",
-      category: "Design"
-    },
-    {
-      id: 2,
-      title: "Design is Storytelling",
-      author: "Ellen Lupton",
-      cover: "https://cdn.bookey.app/files/publish-book/Design_Is_Storytelling_6556572.jpg?auto=compress&cs=tinysrgb&w=300&h=400",
-      summary: "A thoughtful exploration of how design creates narratives and guides users through experiences.",
-      completedDate: "October 2025",
-      category: "Design"
-    },
-    {
-      id: 3,
-      title: "Extra Bold",
-      author: "Ellen Lupton, Farah Kafei, et al.",
-      cover: "https://imgv2-2-f.scribdassets.com/img/document/694453869/original/6b5b1c3e9c/1706229141?v=1?auto=compress&cs=tinysrgb&w=300&h=400",
-      summary: "A feminist, inclusive approach to graphic design for social change.",
-      completedDate: "October 2025",
-      category: "Design"
-    },
-    {
-      id: 4,
-      title: "The Art of War",
-      author: "Sun Tzu",
-      cover: "https://images.booksense.com/images/556/593/9781604593556.jpg?auto=compress&cs=tinysrgb&w=300&h=400",
-      summary: "Ancient military strategy that translates surprisingly well to modern business and design thinking.",
-      completedDate: "October 2025",
-      category: "Strategy"
-    },
-    {
-      id: 5,
-      title: "Arcanum Unbounded",
-      author: "Brandon Sanderson",
-      cover: "https://pictures.abebooks.com/inventory/31351128394.jpg?auto=compress&cs=tinysrgb&w=300&h=400",
-      summary: "A collection of short stories from the Cosmere universe, showcasing Sanderson's intricate world-building.",
-      completedDate: "September 2025",
-      category: "Fiction"
-    },
-    {
-      id: 6,
-      title: "The Hitchhiker's Guide to the Galaxy",
-      author: "Douglas Adams",
-      cover: "https://m.media-amazon.com/images/I/91t2EXhrJwL._SL1500_.jpg?auto=compress&cs=tinysrgb&w=300&h=400",
-      summary: "A hilarious, absurdist journey through space that reminds us not to take anything too seriously.",
-      completedDate: "September 2025",
-      category: "Fiction"
-    },
-    {
-      id: 7,
-      title: "No One Ever Told Us That",
-      author: "John Spooner",
-      cover: "https://m.media-amazon.com/images/I/51xQP1XzeeL._SL1360_.jpg?auto=compress&cs=tinysrgb&w=300&h=400",
-      summary: "Practical wisdom and life lessons that should have been taught but weren't.",
-      completedDate: "September 2025",
-      category: "Self-Help"
-    },
-    {
-      id: 8,
-      title: "Good to Great",
-      author: "Jim Collins",
-      cover: "https://image.gramedia.net/rs:fit:0:0/plain/https://cdn.gramedia.com/uploads/items/img475.jpg?auto=compress&cs=tinysrgb&w=300&h=400",
-      summary: "An analysis of what separates good companies from truly great ones, with timeless principles for excellence.",
-      completedDate: "August 2025",
-      category: "Business"
-    },
-    {
-      id: 9,
-      title: "Interviewing Users",
-      author: "Steve Portigal",
-      cover: "https://m.media-amazon.com/images/I/712lkBWiTDL.jpg?auto=compress&cs=tinysrgb&w=300&h=400",
-      summary: "A comprehensive guide to conducting effective user research interviews and extracting valuable insights.",
-      completedDate: "October 2025",
-      category: "Design"
-    },
-    {
-      id: 10,
-      title: "The Great Gatsby",
-      author: "F. Scott Fitzgerald",
-      cover: "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9780743273565/the-great-gatsby-9780743273565_hr.jpg?auto=compress&cs=tinysrgb&w=300&h=400",
-      summary: "Ive read Gatsby three or four times now, but in the words of ___, it gets better every time.",
-      completedDate: "September 2025",
-      category: "Fiction"
-    },
-    {
-      id: 11,
-      title: "Thinking, Fast and Slow",
-      author: "Daniel Kahneman",
-      cover: "https://dansilvestre.com/wp-content/uploads/2021/04/71HXn7NT7DL.jpg&cs=tinysrgb&w=300&h=400",
-      summary: "Kahneman's insights into cognitive biases have profoundly influenced my user research methodology. Understanding System 1 and System 2 thinking helps me design interfaces that work with, rather than against, human psychology. Essential reading for any designer working on complex systems.",
-      completedDate: "Currently Reading",
-      category: "Psychology"
-    }
-  ];
 
   const categories = [...new Set(books.map(book => book.category))];
 
@@ -255,6 +118,10 @@ const Bookshelf: React.FC = () => {
                     src={book.cover}
                     alt={`${book.title} cover`}
                     className="w-full h-48 object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=300&h=400";
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-deep-indigo/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
@@ -285,6 +152,10 @@ const Bookshelf: React.FC = () => {
                   src={selectedBook.cover}
                   alt={`${selectedBook.title} cover`}
                   className="w-full h-full object-cover rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=300&h=400";
+                  }}
                 />
               </div>
 
