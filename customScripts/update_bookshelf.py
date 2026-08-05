@@ -8,13 +8,23 @@ Run manually after updating the sheet:
 
 Safe to re-run: books already present in booksData.ts (matched by title)
 are skipped, so nothing gets duplicated.
+
+Cover art is looked up automatically (Open Library, falling back to Google
+Books) and can fail for individual titles. To retry just the covers that
+fell back to the placeholder image, without re-syncing anything else:
+    python3 customScripts/update_bookshelf.py --backfill-covers
+
+Google Books works without a key but shares a global anonymous quota. To
+use your own quota instead, set GOOGLE_BOOKS_API_KEY in the environment.
 """
 
 import csv
 import io
 import json
+import os
 import re
 import sys
+import time
 import urllib.parse
 import urllib.request
 from datetime import datetime
@@ -34,6 +44,16 @@ PLACEHOLDER_COVER = (
 )
 
 ARRAY_START = "export const books: Book[] = [\n"
+
+OPEN_LIBRARY_TIMEOUT = 25
+OPEN_LIBRARY_RETRIES = 3
+GOOGLE_BOOKS_TIMEOUT = 15
+GOOGLE_BOOKS_API_KEY = os.environ.get("GOOGLE_BOOKS_API_KEY")
+
+ENTRY_PATTERN = re.compile(
+    r'id: (\d+),\s*\n\s*title: "((?:[^"\\]|\\.)*)",\s*\n\s*author: "((?:[^"\\]|\\.)*)",'
+    r'\s*\n\s*cover: "([^"]*)",'
+)
 
 
 def fetch_sheet_rows():
@@ -68,20 +88,52 @@ def date_sort_key(date_str):
         return datetime.min
 
 
-def fetch_cover(title, author):
+def fetch_cover_open_library(title, author):
     primary_author = author.split(",")[0].strip()
     query = urllib.parse.urlencode({"title": title, "author": primary_author, "limit": 1})
     url = f"https://openlibrary.org/search.json?{query}"
+    for attempt in range(1, OPEN_LIBRARY_RETRIES + 1):
+        try:
+            with urllib.request.urlopen(url, timeout=OPEN_LIBRARY_TIMEOUT) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+            docs = data.get("docs") or []
+            cover_id = docs[0].get("cover_i") if docs else None
+            # A real response with no cover_id is a genuine miss, not worth retrying.
+            return f"https://covers.openlibrary.org/b/id/{cover_id}-M.jpg" if cover_id else None
+        except Exception as e:
+            if attempt < OPEN_LIBRARY_RETRIES:
+                time.sleep(2 * attempt)
+            else:
+                print(f"  (Open Library lookup failed for {title!r} after {OPEN_LIBRARY_RETRIES} attempts: {e})")
+    return None
+
+
+def fetch_cover_google_books(title, author):
+    primary_author = author.split(",")[0].strip()
+    params = {"q": f"intitle:{title} inauthor:{primary_author}", "maxResults": 1}
+    if GOOGLE_BOOKS_API_KEY:
+        params["key"] = GOOGLE_BOOKS_API_KEY
+    query = urllib.parse.urlencode(params)
+    url = f"https://www.googleapis.com/books/v1/volumes?{query}"
     try:
-        with urllib.request.urlopen(url, timeout=10) as resp:
+        with urllib.request.urlopen(url, timeout=GOOGLE_BOOKS_TIMEOUT) as resp:
             data = json.loads(resp.read().decode("utf-8"))
-        docs = data.get("docs") or []
-        cover_id = docs[0].get("cover_i") if docs else None
-        if cover_id:
-            return f"https://covers.openlibrary.org/b/id/{cover_id}-M.jpg", True
+        items = data.get("items") or []
+        if not items:
+            return None
+        image_links = items[0].get("volumeInfo", {}).get("imageLinks", {})
+        thumbnail = image_links.get("thumbnail") or image_links.get("smallThumbnail")
+        return thumbnail.replace("http://", "https://") if thumbnail else None
     except Exception as e:
-        print(f"  (cover lookup failed for {title!r}: {e})")
-    return PLACEHOLDER_COVER, False
+        print(f"  (Google Books lookup failed for {title!r}: {e})")
+    return None
+
+
+def fetch_cover(title, author):
+    cover = fetch_cover_open_library(title, author)
+    if not cover:
+        cover = fetch_cover_google_books(title, author)
+    return (cover, True) if cover else (PLACEHOLDER_COVER, False)
 
 
 def existing_titles_and_max_id(contents):
@@ -101,7 +153,45 @@ def format_entry(entry):
     return "\n".join(lines)
 
 
+def backfill_covers():
+    contents = BOOKS_DATA_PATH.read_text(encoding="utf-8")
+    matches = list(ENTRY_PATTERN.finditer(contents))
+
+    updates = []
+    fixed, still_placeholder = [], []
+    for m in matches:
+        _id, title, author, cover = m.groups()
+        if cover != PLACEHOLDER_COVER:
+            continue
+        new_cover, found = fetch_cover(title, author)
+        if found:
+            updates.append((*m.span(4), new_cover))
+            fixed.append(title)
+        else:
+            still_placeholder.append(title)
+
+    if not updates:
+        print("No covers could be improved right now.")
+    else:
+        # Apply from the end backwards so earlier match offsets stay valid.
+        for start, end, new_cover in sorted(updates, key=lambda u: u[0], reverse=True):
+            contents = contents[:start] + new_cover + contents[end:]
+        BOOKS_DATA_PATH.write_text(contents, encoding="utf-8")
+        print(f"Fixed {len(fixed)} cover(s):")
+        for t in fixed:
+            print(f"  - {t}")
+
+    if still_placeholder:
+        print(f"Still on the placeholder for {len(still_placeholder)} book(s) (try again later, or fix source data):")
+        for t in still_placeholder:
+            print(f"  - {t}")
+
+
 def main():
+    if "--backfill-covers" in sys.argv:
+        backfill_covers()
+        return
+
     rows = fetch_sheet_rows()
     reviewed = [r for r in rows if r.get("Post-Read Note", "").strip()]
 
@@ -143,9 +233,10 @@ def main():
     skipped = len(reviewed) - len(new_rows)
     print(f"Skipped {skipped} book(s) already present.")
     if placeholder_used:
-        print(f"Used placeholder cover for {len(placeholder_used)} title(s) (no Open Library match):")
+        print(f"Used placeholder cover for {len(placeholder_used)} title(s):")
         for t in placeholder_used:
             print(f"  - {t}")
+        print("Run with --backfill-covers later to retry just these.")
 
 
 if __name__ == "__main__":
