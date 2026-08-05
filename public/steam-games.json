@@ -1,6 +1,19 @@
 {
   "games": [
     {
+      "appid": 548430,
+      "name": "Deep Rock Galactic",
+      "playtime_2weeks": 90,
+      "playtime_forever": 199,
+      "img_icon_url": "e033e23c29a192a17c16a7645a2b423ac64ff447",
+      "playtime_windows_forever": 199,
+      "playtime_mac_forever": 0,
+      "playtime_linux_forever": 0,
+      "playtime_deck_forever": 0,
+      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/548430/header.jpg",
+      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/548430/e033e23c29a192a17c16a7645a2b423ac64ff447.jpg"
+    },
+    {
       "appid": 553850,
       "name": "HELLDIVERS™ 2",
       "playtime_2weeks": 57,
@@ -12,20 +25,7 @@
       "playtime_deck_forever": 0,
       "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/553850/header.jpg",
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/553850/c3dff088e090f81d6e3d88eabbb67732647c69cf.jpg"
-    },
-    {
-      "appid": 548430,
-      "name": "Deep Rock Galactic",
-      "playtime_2weeks": 17,
-      "playtime_forever": 126,
-      "img_icon_url": "e033e23c29a192a17c16a7645a2b423ac64ff447",
-      "playtime_windows_forever": 126,
-      "playtime_mac_forever": 0,
-      "playtime_linux_forever": 0,
-      "playtime_deck_forever": 0,
-      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/548430/header.jpg",
-      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/548430/e033e23c29a192a17c16a7645a2b423ac64ff447.jpg"
     }
   ],
-  "updatedAt": "2026-08-04T19:37:34.970Z"
+  "updatedAt": "2026-08-05T14:08:32.143Z"
 }
