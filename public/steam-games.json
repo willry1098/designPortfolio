@@ -25,7 +25,20 @@
       "playtime_deck_forever": 0,
       "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/553850/header.jpg",
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/553850/c3dff088e090f81d6e3d88eabbb67732647c69cf.jpg"
+    },
+    {
+      "appid": 920210,
+      "name": "LEGO® Star Wars™: The Skywalker Saga",
+      "playtime_2weeks": 37,
+      "playtime_forever": 2704,
+      "img_icon_url": "568a07f03f8dba0b74c4a02f6ebb43ce5e09075c",
+      "playtime_windows_forever": 2704,
+      "playtime_mac_forever": 0,
+      "playtime_linux_forever": 0,
+      "playtime_deck_forever": 0,
+      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/920210/header.jpg",
+      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/920210/568a07f03f8dba0b74c4a02f6ebb43ce5e09075c.jpg"
     }
   ],
-  "updatedAt": "2026-08-06T23:58:12.800Z"
+  "updatedAt": "2026-08-07T03:11:41.635Z"
 }
