@@ -14,6 +14,19 @@
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/548430/e033e23c29a192a17c16a7645a2b423ac64ff447.jpg"
     },
     {
+      "appid": 1426210,
+      "name": "It Takes Two",
+      "playtime_2weeks": 88,
+      "playtime_forever": 88,
+      "img_icon_url": "6b15f6d81c4fc52056f4928b363b7fac591a945b",
+      "playtime_windows_forever": 88,
+      "playtime_mac_forever": 0,
+      "playtime_linux_forever": 0,
+      "playtime_deck_forever": 0,
+      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/1426210/header.jpg",
+      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1426210/6b15f6d81c4fc52056f4928b363b7fac591a945b.jpg"
+    },
+    {
       "appid": 553850,
       "name": "HELLDIVERS™ 2",
       "playtime_2weeks": 57,
@@ -40,5 +53,5 @@
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/920210/568a07f03f8dba0b74c4a02f6ebb43ce5e09075c.jpg"
     }
   ],
-  "updatedAt": "2026-08-09T18:39:54.320Z"
+  "updatedAt": "2026-08-10T01:46:36.536Z"
 }
