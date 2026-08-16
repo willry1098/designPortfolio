@@ -29,10 +29,10 @@
     {
       "appid": 1222730,
       "name": "STAR WARS™: Squadrons",
-      "playtime_2weeks": 65,
-      "playtime_forever": 570,
+      "playtime_2weeks": 74,
+      "playtime_forever": 578,
       "img_icon_url": "fb47bc807e02c5ded16d36e13ba2d10dd1203205",
-      "playtime_windows_forever": 570,
+      "playtime_windows_forever": 578,
       "playtime_mac_forever": 0,
       "playtime_linux_forever": 0,
       "playtime_deck_forever": 0,
@@ -66,5 +66,5 @@
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/920210/568a07f03f8dba0b74c4a02f6ebb43ce5e09075c.jpg"
     }
   ],
-  "updatedAt": "2026-08-16T12:37:53.399Z"
+  "updatedAt": "2026-08-16T18:28:11.592Z"
 }
