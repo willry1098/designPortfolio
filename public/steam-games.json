@@ -3,10 +3,10 @@
     {
       "appid": 1222730,
       "name": "STAR WARS™: Squadrons",
-      "playtime_2weeks": 630,
-      "playtime_forever": 1135,
+      "playtime_2weeks": 682,
+      "playtime_forever": 1187,
       "img_icon_url": "fb47bc807e02c5ded16d36e13ba2d10dd1203205",
-      "playtime_windows_forever": 1135,
+      "playtime_windows_forever": 1187,
       "playtime_mac_forever": 0,
       "playtime_linux_forever": 0,
       "playtime_deck_forever": 0,
@@ -14,17 +14,17 @@
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1222730/fb47bc807e02c5ded16d36e13ba2d10dd1203205.jpg"
     },
     {
-      "appid": 548430,
-      "name": "Deep Rock Galactic",
-      "playtime_2weeks": 90,
-      "playtime_forever": 199,
-      "img_icon_url": "e033e23c29a192a17c16a7645a2b423ac64ff447",
-      "playtime_windows_forever": 199,
+      "appid": 1250410,
+      "name": "Microsoft Flight Simulator (2020)",
+      "playtime_2weeks": 136,
+      "playtime_forever": 775,
+      "img_icon_url": "e374de450803dc212690bf721a14843a0dd2ad58",
+      "playtime_windows_forever": 775,
       "playtime_mac_forever": 0,
       "playtime_linux_forever": 0,
       "playtime_deck_forever": 0,
-      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/548430/header.jpg",
-      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/548430/e033e23c29a192a17c16a7645a2b423ac64ff447.jpg"
+      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/1250410/header.jpg",
+      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250410/e374de450803dc212690bf721a14843a0dd2ad58.jpg"
     },
     {
       "appid": 1426210,
@@ -40,17 +40,30 @@
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1426210/6b15f6d81c4fc52056f4928b363b7fac591a945b.jpg"
     },
     {
-      "appid": 553850,
-      "name": "HELLDIVERS™ 2",
-      "playtime_2weeks": 57,
-      "playtime_forever": 2127,
-      "img_icon_url": "c3dff088e090f81d6e3d88eabbb67732647c69cf",
-      "playtime_windows_forever": 2127,
+      "appid": 548430,
+      "name": "Deep Rock Galactic",
+      "playtime_2weeks": 72,
+      "playtime_forever": 199,
+      "img_icon_url": "e033e23c29a192a17c16a7645a2b423ac64ff447",
+      "playtime_windows_forever": 199,
       "playtime_mac_forever": 0,
       "playtime_linux_forever": 0,
       "playtime_deck_forever": 0,
-      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/553850/header.jpg",
-      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/553850/c3dff088e090f81d6e3d88eabbb67732647c69cf.jpg"
+      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/548430/header.jpg",
+      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/548430/e033e23c29a192a17c16a7645a2b423ac64ff447.jpg"
+    },
+    {
+      "appid": 236390,
+      "name": "War Thunder",
+      "playtime_2weeks": 59,
+      "playtime_forever": 202,
+      "img_icon_url": "c69fbafb6e9891314cc5df0fe6a659612c289bf9",
+      "playtime_windows_forever": 202,
+      "playtime_mac_forever": 0,
+      "playtime_linux_forever": 0,
+      "playtime_deck_forever": 0,
+      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/236390/header.jpg",
+      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/236390/c69fbafb6e9891314cc5df0fe6a659612c289bf9.jpg"
     },
     {
       "appid": 920210,
@@ -66,5 +79,5 @@
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/920210/568a07f03f8dba0b74c4a02f6ebb43ce5e09075c.jpg"
     }
   ],
-  "updatedAt": "2026-08-18T01:11:37.331Z"
+  "updatedAt": "2026-08-18T06:41:32.982Z"
 }
