@@ -53,19 +53,6 @@
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/236390/c69fbafb6e9891314cc5df0fe6a659612c289bf9.jpg"
     },
     {
-      "appid": 920210,
-      "name": "LEGO® Star Wars™: The Skywalker Saga",
-      "playtime_2weeks": 37,
-      "playtime_forever": 2704,
-      "img_icon_url": "568a07f03f8dba0b74c4a02f6ebb43ce5e09075c",
-      "playtime_windows_forever": 2704,
-      "playtime_mac_forever": 0,
-      "playtime_linux_forever": 0,
-      "playtime_deck_forever": 0,
-      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/920210/header.jpg",
-      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/920210/568a07f03f8dba0b74c4a02f6ebb43ce5e09075c.jpg"
-    },
-    {
       "appid": 1086940,
       "name": "Baldur's Gate 3",
       "playtime_2weeks": 20,
@@ -79,5 +66,5 @@
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg"
     }
   ],
-  "updatedAt": "2026-08-21T01:16:00.136Z"
+  "updatedAt": "2026-08-21T06:45:19.978Z"
 }
