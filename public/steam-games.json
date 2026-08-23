@@ -14,6 +14,19 @@
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1222730/fb47bc807e02c5ded16d36e13ba2d10dd1203205.jpg"
     },
     {
+      "appid": 306130,
+      "name": "The Elder Scrolls Online",
+      "playtime_2weeks": 151,
+      "playtime_forever": 284,
+      "img_icon_url": "2a0f43963c08a3755682adb2369918c9ad07ef1b",
+      "playtime_windows_forever": 152,
+      "playtime_mac_forever": 0,
+      "playtime_linux_forever": 0,
+      "playtime_deck_forever": 0,
+      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/306130/header.jpg",
+      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/306130/2a0f43963c08a3755682adb2369918c9ad07ef1b.jpg"
+    },
+    {
       "appid": 1250410,
       "name": "Microsoft Flight Simulator (2020)",
       "playtime_2weeks": 136,
@@ -40,6 +53,19 @@
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1426210/6b15f6d81c4fc52056f4928b363b7fac591a945b.jpg"
     },
     {
+      "appid": 632360,
+      "name": "Risk of Rain 2",
+      "playtime_2weeks": 63,
+      "playtime_forever": 629,
+      "img_icon_url": "0b809ac6f25e6570fecae5fc47bca0139a7bf70c",
+      "playtime_windows_forever": 629,
+      "playtime_mac_forever": 0,
+      "playtime_linux_forever": 0,
+      "playtime_deck_forever": 0,
+      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/632360/header.jpg",
+      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/632360/0b809ac6f25e6570fecae5fc47bca0139a7bf70c.jpg"
+    },
+    {
       "appid": 236390,
       "name": "War Thunder",
       "playtime_2weeks": 59,
@@ -51,20 +77,7 @@
       "playtime_deck_forever": 0,
       "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/236390/header.jpg",
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/236390/c69fbafb6e9891314cc5df0fe6a659612c289bf9.jpg"
-    },
-    {
-      "appid": 1086940,
-      "name": "Baldur's Gate 3",
-      "playtime_2weeks": 20,
-      "playtime_forever": 9040,
-      "img_icon_url": "d866cae7ea1e471fdbc206287111f1b642373bd9",
-      "playtime_windows_forever": 8006,
-      "playtime_mac_forever": 1034,
-      "playtime_linux_forever": 0,
-      "playtime_deck_forever": 0,
-      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/1086940/header.jpg",
-      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg"
     }
   ],
-  "updatedAt": "2026-08-23T12:39:04.173Z"
+  "updatedAt": "2026-08-23T18:28:24.261Z"
 }
