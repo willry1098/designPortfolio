@@ -16,10 +16,10 @@
     {
       "appid": 306130,
       "name": "The Elder Scrolls Online",
-      "playtime_2weeks": 151,
-      "playtime_forever": 284,
+      "playtime_2weeks": 541,
+      "playtime_forever": 674,
       "img_icon_url": "2a0f43963c08a3755682adb2369918c9ad07ef1b",
-      "playtime_windows_forever": 152,
+      "playtime_windows_forever": 542,
       "playtime_mac_forever": 0,
       "playtime_linux_forever": 0,
       "playtime_deck_forever": 0,
@@ -38,19 +38,6 @@
       "playtime_deck_forever": 0,
       "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/1250410/header.jpg",
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250410/e374de450803dc212690bf721a14843a0dd2ad58.jpg"
-    },
-    {
-      "appid": 1426210,
-      "name": "It Takes Two",
-      "playtime_2weeks": 88,
-      "playtime_forever": 88,
-      "img_icon_url": "6b15f6d81c4fc52056f4928b363b7fac591a945b",
-      "playtime_windows_forever": 88,
-      "playtime_mac_forever": 0,
-      "playtime_linux_forever": 0,
-      "playtime_deck_forever": 0,
-      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/1426210/header.jpg",
-      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1426210/6b15f6d81c4fc52056f4928b363b7fac591a945b.jpg"
     },
     {
       "appid": 632360,
@@ -77,7 +64,20 @@
       "playtime_deck_forever": 0,
       "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/236390/header.jpg",
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/236390/c69fbafb6e9891314cc5df0fe6a659612c289bf9.jpg"
+    },
+    {
+      "appid": 1086940,
+      "name": "Baldur's Gate 3",
+      "playtime_2weeks": 20,
+      "playtime_forever": 9040,
+      "img_icon_url": "d866cae7ea1e471fdbc206287111f1b642373bd9",
+      "playtime_windows_forever": 8006,
+      "playtime_mac_forever": 1034,
+      "playtime_linux_forever": 0,
+      "playtime_deck_forever": 0,
+      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/1086940/header.jpg",
+      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg"
     }
   ],
-  "updatedAt": "2026-08-23T18:28:24.261Z"
+  "updatedAt": "2026-08-24T01:15:53.644Z"
 }
