@@ -1,19 +1,6 @@
 {
   "games": [
     {
-      "appid": 1222730,
-      "name": "STAR WARS™: Squadrons",
-      "playtime_2weeks": 683,
-      "playtime_forever": 1262,
-      "img_icon_url": "fb47bc807e02c5ded16d36e13ba2d10dd1203205",
-      "playtime_windows_forever": 1262,
-      "playtime_mac_forever": 0,
-      "playtime_linux_forever": 0,
-      "playtime_deck_forever": 0,
-      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/1222730/header.jpg",
-      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1222730/fb47bc807e02c5ded16d36e13ba2d10dd1203205.jpg"
-    },
-    {
       "appid": 306130,
       "name": "The Elder Scrolls Online",
       "playtime_2weeks": 666,
@@ -25,6 +12,19 @@
       "playtime_deck_forever": 0,
       "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/306130/header.jpg",
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/306130/2a0f43963c08a3755682adb2369918c9ad07ef1b.jpg"
+    },
+    {
+      "appid": 1222730,
+      "name": "STAR WARS™: Squadrons",
+      "playtime_2weeks": 253,
+      "playtime_forever": 1262,
+      "img_icon_url": "fb47bc807e02c5ded16d36e13ba2d10dd1203205",
+      "playtime_windows_forever": 1262,
+      "playtime_mac_forever": 0,
+      "playtime_linux_forever": 0,
+      "playtime_deck_forever": 0,
+      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/1222730/header.jpg",
+      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1222730/fb47bc807e02c5ded16d36e13ba2d10dd1203205.jpg"
     },
     {
       "appid": 1250410,
@@ -79,5 +79,5 @@
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg"
     }
   ],
-  "updatedAt": "2026-08-31T12:51:05.831Z"
+  "updatedAt": "2026-08-31T22:32:41.533Z"
 }
