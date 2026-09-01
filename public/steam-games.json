@@ -40,19 +40,6 @@
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/632360/0b809ac6f25e6570fecae5fc47bca0139a7bf70c.jpg"
     },
     {
-      "appid": 1250410,
-      "name": "Microsoft Flight Simulator (2020)",
-      "playtime_2weeks": 58,
-      "playtime_forever": 775,
-      "img_icon_url": "e374de450803dc212690bf721a14843a0dd2ad58",
-      "playtime_windows_forever": 775,
-      "playtime_mac_forever": 0,
-      "playtime_linux_forever": 0,
-      "playtime_deck_forever": 0,
-      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/1250410/header.jpg",
-      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250410/e374de450803dc212690bf721a14843a0dd2ad58.jpg"
-    },
-    {
       "appid": 1086940,
       "name": "Baldur's Gate 3",
       "playtime_2weeks": 20,
@@ -66,5 +53,5 @@
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg"
     }
   ],
-  "updatedAt": "2026-09-01T03:50:28.249Z"
+  "updatedAt": "2026-09-01T11:11:26.584Z"
 }
