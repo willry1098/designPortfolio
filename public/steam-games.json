@@ -16,7 +16,7 @@
     {
       "appid": 1222730,
       "name": "STAR WARS™: Squadrons",
-      "playtime_2weeks": 253,
+      "playtime_2weeks": 75,
       "playtime_forever": 1262,
       "img_icon_url": "fb47bc807e02c5ded16d36e13ba2d10dd1203205",
       "playtime_windows_forever": 1262,
@@ -25,19 +25,6 @@
       "playtime_deck_forever": 0,
       "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/1222730/header.jpg",
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1222730/fb47bc807e02c5ded16d36e13ba2d10dd1203205.jpg"
-    },
-    {
-      "appid": 1250410,
-      "name": "Microsoft Flight Simulator (2020)",
-      "playtime_2weeks": 136,
-      "playtime_forever": 775,
-      "img_icon_url": "e374de450803dc212690bf721a14843a0dd2ad58",
-      "playtime_windows_forever": 775,
-      "playtime_mac_forever": 0,
-      "playtime_linux_forever": 0,
-      "playtime_deck_forever": 0,
-      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/1250410/header.jpg",
-      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250410/e374de450803dc212690bf721a14843a0dd2ad58.jpg"
     },
     {
       "appid": 632360,
@@ -53,17 +40,17 @@
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/632360/0b809ac6f25e6570fecae5fc47bca0139a7bf70c.jpg"
     },
     {
-      "appid": 236390,
-      "name": "War Thunder",
-      "playtime_2weeks": 59,
-      "playtime_forever": 202,
-      "img_icon_url": "c69fbafb6e9891314cc5df0fe6a659612c289bf9",
-      "playtime_windows_forever": 202,
+      "appid": 1250410,
+      "name": "Microsoft Flight Simulator (2020)",
+      "playtime_2weeks": 58,
+      "playtime_forever": 775,
+      "img_icon_url": "e374de450803dc212690bf721a14843a0dd2ad58",
+      "playtime_windows_forever": 775,
       "playtime_mac_forever": 0,
       "playtime_linux_forever": 0,
       "playtime_deck_forever": 0,
-      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/236390/header.jpg",
-      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/236390/c69fbafb6e9891314cc5df0fe6a659612c289bf9.jpg"
+      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/1250410/header.jpg",
+      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250410/e374de450803dc212690bf721a14843a0dd2ad58.jpg"
     },
     {
       "appid": 1086940,
@@ -79,5 +66,5 @@
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg"
     }
   ],
-  "updatedAt": "2026-08-31T22:32:41.533Z"
+  "updatedAt": "2026-09-01T03:50:28.249Z"
 }
