@@ -14,19 +14,6 @@
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/306130/2a0f43963c08a3755682adb2369918c9ad07ef1b.jpg"
     },
     {
-      "appid": 1222730,
-      "name": "STAR WARS™: Squadrons",
-      "playtime_2weeks": 75,
-      "playtime_forever": 1262,
-      "img_icon_url": "fb47bc807e02c5ded16d36e13ba2d10dd1203205",
-      "playtime_windows_forever": 1262,
-      "playtime_mac_forever": 0,
-      "playtime_linux_forever": 0,
-      "playtime_deck_forever": 0,
-      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/1222730/header.jpg",
-      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1222730/fb47bc807e02c5ded16d36e13ba2d10dd1203205.jpg"
-    },
-    {
       "appid": 632360,
       "name": "Risk of Rain 2",
       "playtime_2weeks": 63,
@@ -38,20 +25,7 @@
       "playtime_deck_forever": 0,
       "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/632360/header.jpg",
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/632360/0b809ac6f25e6570fecae5fc47bca0139a7bf70c.jpg"
-    },
-    {
-      "appid": 1086940,
-      "name": "Baldur's Gate 3",
-      "playtime_2weeks": 20,
-      "playtime_forever": 9040,
-      "img_icon_url": "d866cae7ea1e471fdbc206287111f1b642373bd9",
-      "playtime_windows_forever": 8006,
-      "playtime_mac_forever": 1034,
-      "playtime_linux_forever": 0,
-      "playtime_deck_forever": 0,
-      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/1086940/header.jpg",
-      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg"
     }
   ],
-  "updatedAt": "2026-09-01T20:38:05.247Z"
+  "updatedAt": "2026-09-02T03:09:50.205Z"
 }
