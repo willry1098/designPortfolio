@@ -3,7 +3,7 @@
     {
       "appid": 306130,
       "name": "The Elder Scrolls Online",
-      "playtime_2weeks": 666,
+      "playtime_2weeks": 409,
       "playtime_forever": 799,
       "img_icon_url": "2a0f43963c08a3755682adb2369918c9ad07ef1b",
       "playtime_windows_forever": 667,
@@ -12,20 +12,7 @@
       "playtime_deck_forever": 0,
       "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/306130/header.jpg",
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/306130/2a0f43963c08a3755682adb2369918c9ad07ef1b.jpg"
-    },
-    {
-      "appid": 632360,
-      "name": "Risk of Rain 2",
-      "playtime_2weeks": 63,
-      "playtime_forever": 629,
-      "img_icon_url": "0b809ac6f25e6570fecae5fc47bca0139a7bf70c",
-      "playtime_windows_forever": 629,
-      "playtime_mac_forever": 0,
-      "playtime_linux_forever": 0,
-      "playtime_deck_forever": 0,
-      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/632360/header.jpg",
-      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/632360/0b809ac6f25e6570fecae5fc47bca0139a7bf70c.jpg"
     }
   ],
-  "updatedAt": "2026-09-06T15:00:54.119Z"
+  "updatedAt": "2026-09-06T20:03:19.318Z"
 }
