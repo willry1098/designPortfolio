@@ -1,18 +1,4 @@
 {
-  "games": [
-    {
-      "appid": 306130,
-      "name": "The Elder Scrolls Online",
-      "playtime_2weeks": 409,
-      "playtime_forever": 799,
-      "img_icon_url": "2a0f43963c08a3755682adb2369918c9ad07ef1b",
-      "playtime_windows_forever": 667,
-      "playtime_mac_forever": 0,
-      "playtime_linux_forever": 0,
-      "playtime_deck_forever": 0,
-      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/306130/header.jpg",
-      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/306130/2a0f43963c08a3755682adb2369918c9ad07ef1b.jpg"
-    }
-  ],
-  "updatedAt": "2026-09-06T20:03:19.318Z"
+  "games": [],
+  "updatedAt": "2026-09-07T03:11:14.965Z"
 }
