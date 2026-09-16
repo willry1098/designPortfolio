@@ -1,6 +1,19 @@
 {
   "games": [
     {
+      "appid": 1086940,
+      "name": "Baldur's Gate 3",
+      "playtime_2weeks": 362,
+      "playtime_forever": 9402,
+      "img_icon_url": "d866cae7ea1e471fdbc206287111f1b642373bd9",
+      "playtime_windows_forever": 8368,
+      "playtime_mac_forever": 1034,
+      "playtime_linux_forever": 0,
+      "playtime_deck_forever": 0,
+      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/1086940/header.jpg",
+      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg"
+    },
+    {
       "appid": 1426210,
       "name": "It Takes Two",
       "playtime_2weeks": 196,
@@ -12,20 +25,7 @@
       "playtime_deck_forever": 0,
       "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/1426210/header.jpg",
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1426210/6b15f6d81c4fc52056f4928b363b7fac591a945b.jpg"
-    },
-    {
-      "appid": 1086940,
-      "name": "Baldur's Gate 3",
-      "playtime_2weeks": 181,
-      "playtime_forever": 9222,
-      "img_icon_url": "d866cae7ea1e471fdbc206287111f1b642373bd9",
-      "playtime_windows_forever": 8188,
-      "playtime_mac_forever": 1034,
-      "playtime_linux_forever": 0,
-      "playtime_deck_forever": 0,
-      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/1086940/header.jpg",
-      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg"
     }
   ],
-  "updatedAt": "2026-09-15T20:54:52.305Z"
+  "updatedAt": "2026-09-16T03:36:31.294Z"
 }
