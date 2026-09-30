@@ -1,19 +1,6 @@
 {
   "games": [
     {
-      "appid": 1086940,
-      "name": "Baldur's Gate 3",
-      "playtime_2weeks": 205,
-      "playtime_forever": 9428,
-      "img_icon_url": "d866cae7ea1e471fdbc206287111f1b642373bd9",
-      "playtime_windows_forever": 8393,
-      "playtime_mac_forever": 1034,
-      "playtime_linux_forever": 0,
-      "playtime_deck_forever": 0,
-      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/1086940/header.jpg",
-      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg"
-    },
-    {
       "appid": 306130,
       "name": "The Elder Scrolls Online",
       "playtime_2weeks": 104,
@@ -25,7 +12,20 @@
       "playtime_deck_forever": 0,
       "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/306130/header.jpg",
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/306130/2a0f43963c08a3755682adb2369918c9ad07ef1b.jpg"
+    },
+    {
+      "appid": 1086940,
+      "name": "Baldur's Gate 3",
+      "playtime_2weeks": 90,
+      "playtime_forever": 9518,
+      "img_icon_url": "d866cae7ea1e471fdbc206287111f1b642373bd9",
+      "playtime_windows_forever": 8483,
+      "playtime_mac_forever": 1034,
+      "playtime_linux_forever": 0,
+      "playtime_deck_forever": 0,
+      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/1086940/header.jpg",
+      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg"
     }
   ],
-  "updatedAt": "2026-09-29T21:56:20.024Z"
+  "updatedAt": "2026-09-30T04:15:42.478Z"
 }
