@@ -3,10 +3,10 @@
     {
       "appid": 1086940,
       "name": "Baldur's Gate 3",
-      "playtime_2weeks": 90,
-      "playtime_forever": 9518,
+      "playtime_2weeks": 264,
+      "playtime_forever": 9692,
       "img_icon_url": "d866cae7ea1e471fdbc206287111f1b642373bd9",
-      "playtime_windows_forever": 8483,
+      "playtime_windows_forever": 8658,
       "playtime_mac_forever": 1034,
       "playtime_linux_forever": 0,
       "playtime_deck_forever": 0,
@@ -14,5 +14,5 @@
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg"
     }
   ],
-  "updatedAt": "2026-10-06T22:23:31.528Z"
+  "updatedAt": "2026-10-07T04:36:14.288Z"
 }
