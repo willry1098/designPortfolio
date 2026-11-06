@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Loader2 } from 'lucide-react';
 import InteractiveMap from './InteractiveMap';
-import { citiesService, City } from '../lib/supabase';
+import type { City } from '../lib/supabase';
 import { getAssetPath } from '../lib/assets';
 
 const MapPage: React.FC = () => {
@@ -18,7 +18,14 @@ const MapPage: React.FC = () => {
     try {
       setLoading(true);
       setError(null);
-      const data = await citiesService.getAllCities();
+      // Static snapshot of the Supabase `cities` table, regenerated with
+      // `npm run export-cities` (scripts/export-cities.mjs). Reading a file
+      // instead of Supabase keeps the map up even if the project gets paused.
+      const response = await fetch(getAssetPath('cities.json'));
+      if (!response.ok) {
+        throw new Error(`Failed to fetch cities: ${response.status} ${response.statusText}`);
+      }
+      const data: City[] = await response.json();
       setCities(data);
     } catch (err) {
       console.error('Error loading cities:', err);

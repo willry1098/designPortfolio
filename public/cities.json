@@ -1,0 +1,101 @@
+[
+  {
+    "id": "e772f21d-15d2-45ce-befb-c321cbc1d281",
+    "name": "Bergen",
+    "x": 24.5,
+    "y": 10.5,
+    "banner_image": "/bergen.png",
+    "description": "Bergen sprawls across a vast expanse of frost-covered terrain, its buildings hewn from the sturdy stone of the surrounding mountains. The streets are narrow and winding, lined with snow-laden structures adorned with intricate carvings and frost-covered gargoyles. A central market square bustles with activity as traders from various races peddle their wares, while children clad in furs engage in playful snowball fights.",
+    "ruler": "King Thrain Ironhelm - The wise and respected dwarf who rules over Frostholm Citadel with a fair but firm hand. King Thrain is known for his strategic mind, strong leadership, and dedication to maintaining the unity of Bergen's willful population.",
+    "ideology": "Gerontocracy - Rule by clan elders",
+    "date_first_visited": "Not Yet discovered"
+  },
+  {
+    "id": "aee043f2-d810-48a8-beff-8379999d3016",
+    "name": "Cortis",
+    "x": 33,
+    "y": 84,
+    "banner_image": "/cortis.png",
+    "description": "A bustling city that rises like a mirage from the golden sands. Surrounded by high sandstone walls adorned with intricate carvings, Cortis stands as a testament to the resilience and unity of its diverse inhabitants—humans, elephantfolk, and lionfolk. The city is a melting pot of cultures, blending the architectural styles and traditions of its varied denizens into a harmonious whole.",
+    "ruler": "Chairwoman Calista - The chief diplomat of Cortis, Calista is known for her ability to negotiate with various factions and maintain the delicate balance within the city.",
+    "ideology": "Oligarchy - Rule by wealth / influence",
+    "date_first_visited": "July 7th, 2025"
+  },
+  {
+    "id": "09d41bf6-8ea6-4f21-82a2-114b3e4c7724",
+    "name": "Galurn",
+    "x": 16,
+    "y": 74,
+    "banner_image": "/galurn.png",
+    "description": "A vibrant and diverse metropolis that stands proudly as the gateway to the internal sea. Nestled between rolling hills and the shimmering waters of the sea, Galurn is a melting pot of cultures, primarily inhabited by brown-skinned humans reminiscent of the Moors. The city's architecture reflects a harmonious blend of various styles, each district telling a different tale of its rich history.",
+    "ruler": "Cadi Mouladreh - a calm, sharp-eyed arbiter whose quiet authority holds Galurn's feuding factions in fragile balance. His measured words carry the weight of law, faith, and a lifetime spent steering the city away from the edge of chaos.",
+    "ideology": "Theocracy - Rule by divine law",
+    "date_first_visited": "Not Yet discovered"
+  },
+  {
+    "id": "068ba975-8c93-4302-bc75-963077676c0a",
+    "name": "Lillonia",
+    "x": 22,
+    "y": 35.5,
+    "banner_image": "/lilonia.png",
+    "description": "Nestled amidst the towering ancient trees of the Great Sylvan Forest, Lilonia stands as a bastion of druidic culture and natural harmony. The city's wooden structures seamlessly blend with the surrounding foliage, creating a living testament to the symbiosis between civilization and the untamed wilderness. The air is filled with the sweet scent of blooming flowers and the distant melodies of forest creatures.",
+    "ruler": "Lady Thalara Moonshadow - The wise and respected leader of Lilonia, Lady Thalara serves as the voice of the city. Her knowledge of druidic arts and diplomacy is unparalleled.",
+    "ideology": "Symmarchy - Rule by mutual accord",
+    "date_first_visited": "Not Yet discovered"
+  },
+  {
+    "id": "1adb9e0e-b717-43f9-b01a-55bbf6d8917c",
+    "name": "Palmyra",
+    "x": 69.5,
+    "y": 80.5,
+    "banner_image": "/palmyra.png",
+    "description": "Nestled at the heart of the scorching desert, Palmyra rises like a shimmering mirage, a testament to the thriving coexistence of diverse civilizations. The city is a bustling hub of trade, culture, and mysticism, with golden sandstone structures adorned with intricate hieroglyphics that tell the tales of ancient prophecies and divine blessings. Palmyra is home to humans, bird people known as Avians, and desert elves, who share this oasis in the vast desert.",
+    "ruler": "The Sun Queen Kaliatopha - A regal figure, Kaliatopha is believed to be an avatar of the sun god Ra-Khet. She rules with benevolence and divine insight, ensuring the harmony of the diverse population.",
+    "ideology": "Monarchy - Rule by bloodline",
+    "date_first_visited": "January 20, 2025"
+  },
+  {
+    "id": "c2be2ce9-7162-47d2-aa39-d0f32629a60e",
+    "name": "Rema",
+    "x": 51.5,
+    "y": 62,
+    "banner_image": "/rema.png",
+    "description": "Imperium Aeternum, also known as the Eternal City, is a sprawling metropolis of grandeur and historical significance. The heart of a vast empire, this ancient city is a testament to the glory of Rome. Its streets are adorned with marble and lined with statues of legendary figures, while monumental structures like the Colosseum and the Pantheon loom over the skyline. The Eiger River gracefully meanders through the city, serving as both a source of life and a natural defense.",
+    "ruler": "Galenus Augustus Iuturnus - The powerful and influential ruler of the Roman Empire, known for his ambitious reforms and expansion of the city.",
+    "ideology": "Autocracy - Rule by one",
+    "date_first_visited": "Not Yet discovered"
+  },
+  {
+    "id": "359a1e06-0ef1-472c-998e-7da49573537e",
+    "name": "Scorne",
+    "x": 36,
+    "y": 75,
+    "banner_image": "/scorne.png",
+    "description": "Nestled along the rugged cliffs of Korčia island, Scorne emerges like a tempest-torn jewel on the edge of the vast, unforgiving sea. Known as the Pirate's Paradise, this city thrives under the rule of the formidable Captain Blackfin, a notorious pirate lord who has managed to keep the chaos in check, turning Scorne into a haven for cutthroats, smugglers, and treasure hunters alike.",
+    "ruler": "Captain Blackfin - A grizzled and weathered pirate lord, Blackfin is as cunning as he is ruthless. Clad in dark leather and adorned with trophies from sea monsters, he rules Scorne with an iron fist. Those who cross him face a watery grave.",
+    "ideology": "Doxocracy - Rule by reputation",
+    "date_first_visited": "November 20, 2025"
+  },
+  {
+    "id": "96d085df-f700-4132-8163-a184450bccf3",
+    "name": "Tolta",
+    "x": 15,
+    "y": 60,
+    "banner_image": "/tolta.png",
+    "description": "Tolta is enclosed by towering stone walls, adorned with intricate carvings depicting scenes from religious texts. A series of gates, each named after a virtue, act as entrances to the city. The cobbled streets wind through neighborhoods where stone buildings with red-tiled roofs house the citizens of Tolta. The central square, Plaza de la Fe, is dominated by the grand Cathedral of Sancta Veritas, an imposing structure with spires that seem to touch the heavens.",
+    "ruler": "High Cardinal Ignatius Valorian - The influential spiritual leader of Tolta, High Cardinal Valorian is a powerful and mysterious figure. He resides in the Cathedral of Sancta Veritas and guides the city's religious affairs with a gentle but firm hand.",
+    "ideology": "Hierocracy - Rule by sacred order",
+    "date_first_visited": "Not Yet discovered"
+  },
+  {
+    "id": "527f84f2-8129-4cef-a9dd-4356f78afe35",
+    "name": "Tratria",
+    "x": 94,
+    "y": 45,
+    "banner_image": "/tratria.png",
+    "description": "A prosperous city nestled in the eastern reaches of the known world, Tratria stands as a beacon of trade and culture. Its strategic location has made it a crossroads for merchants and travelers from distant lands.\n\nThe city's architecture reflects centuries of diverse influences, with grand marketplaces and towering temples that speak to both its wealth and spiritual significance. The people of Tratria are known for their hospitality and shrewd business acumen.\n\nBeyond its commercial importance, Tratria serves as a center of learning, where scholars gather to study ancient texts and debate philosophy in the shadow of its famous academies.",
+    "ruler": "Governor Marcus Valius",
+    "ideology": "Aristocracy - Rule by noble class",
+    "date_first_visited": "10/03/2024"
+  }
+]

@@ -14,7 +14,7 @@ npm run typecheck   # must pass: CI runs it before deploying
 npm run build       # production build into dist/
 ```
 
-Local dev needs a `.env` with `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` (used by the D&D map pages).
+Local dev needs a `.env` with `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` for `/city-manager` and `npm run export-cities`. The `/map` page itself reads the static `public/cities.json`.
 
 ## Where content lives
 
