@@ -7,6 +7,7 @@ import AboutPage from './components/AboutPage';
 import Bookshelf from './components/Bookshelf';
 import MapPage from './components/MapPage';
 import CityManager from './components/CityManager';
+import NextNowPage from './components/NextNowPage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/bookshelf" element={<Bookshelf />} />
         <Route path="/map" element={<MapPage />} />
         <Route path="/city-manager" element={<CityManager />} />
+        <Route path="/nextnow" element={<NextNowPage />} />
       </Routes>
     </Router>
   );

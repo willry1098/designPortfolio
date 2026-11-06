@@ -106,3 +106,25 @@ img {
   max-width: 100%;
   height: auto;
 }
+/* "How this application was built" (NextNowPage): stage details reveal in place */
+@keyframes stageIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stage-in {
+  animation: stageIn 0.35s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage-in,
+  .animate-fade-in {
+    animation: none;
+  }
+}
