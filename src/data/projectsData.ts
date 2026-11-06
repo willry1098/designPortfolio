@@ -1,7 +1,24 @@
 import { getAssetPath } from '../lib/assets';
 
+export interface Player {
+  name: string;
+  image: string;
+  description: string;
+}
+
 export interface ProjectSection {
-  type: 'text' | 'image' | 'split' | 'quote' | 'stats' | 'video' | 'carousel';
+  type:
+    | 'text'
+    | 'image'
+    | 'split'
+    | 'quote'
+    | 'stats'
+    | 'video'
+    | 'carousel'
+    | 'pdf'
+    | 'pdfSplit'
+    | 'playerTabs'
+    | 'imageWithDisclaimer';
   title?: string;
   subtitle?: string;
   content?: string;
@@ -14,6 +31,11 @@ export interface ProjectSection {
   video?: string;
   videoAlt?: string;
   images?: Array<{ src: string; alt: string }>;
+  pdf?: string;
+  pdfAlt?: string;
+  pdfPosition?: 'left' | 'right';
+  players?: Player[];
+  disclaimer?: string;
 }
 
 export interface Project {
@@ -27,7 +49,15 @@ export interface Project {
   duration: string;
   team: string;
   tags: string[];
+  headerQuote?: string;
   hcdPhases: {
+    // Non-HCD story sections, rendered before the HCD phases (see ProjectDetailPage)
+    theory?: ProjectSection[];
+    'cooking-in-quarantine'?: ProjectSection[];
+    'from-moms-kitchen'?: ProjectSection[];
+    'meet-the-players'?: ProjectSection[];
+    'explore-the-world'?: ProjectSection[];
+    // Standard HCD phases
     user?: ProjectSection[];
     define?: ProjectSection[];
     ideate?: ProjectSection[];
@@ -118,10 +148,10 @@ export const projects: Project[] = [
     title: 'Chapel Row Markers',
     subtitle: 'Student-Generated Designs Improving Timeless Chapel',
     category: 'Design Education & Physical Product',
-    heroImage: getAssetPath('/IMG_5513_edited copy.jpg'),
-    overview: 'In spring 2024, I guided six ninth-grade engineering students through a semester-long redesign of our school\'s chapel row markers. The project aimed to practically demonstrate human centered design principles to create durable, aesthetically coherent seating plaques that would honor the space\'s tradition while improving organization during assemblies. The project fused education, design, and community impact, culminating in over 100 student-fabricated plaques now permanently installed in the school\'s chapel.',
+    heroImage: getAssetPath('/chapel-row-markers-hero.jpg'),
+    overview: 'In spring 2025, I guided six ninth-grade engineering students through a semester-long redesign of our school\'s chapel row markers. The project aimed to practically demonstrate human centered design principles to create durable, aesthetically coherent seating plaques that would honor the space\'s tradition while improving organization during assemblies. The project fused education, design, and community impact, culminating in over 100 student-fabricated plaques now permanently installed in the school\'s chapel.',
     role: 'Teacher (Team Manager), Lead Designer',
-    duration: '3 months',
+    duration: '5 months (January–May 2025)',
     team: '1 teacher, 6 students',
     tags: ['Design Education', 'Physical Design', 'Fabrication', 'Student Projects'],
     hcdPhases: {},
@@ -129,7 +159,7 @@ export const projects: Project[] = [
     sections: [
       {
         type: 'split',
-        title: '\"Who needs what and why?\"',
+        title: '"Who needs what and why?"',
         content: 'was the question I repeatedly presented to our class. Through the class project, the team arrived at \'Belmont Hill needs more-permanent row markers to help students find their seats in chapel because the current paper signs do not match the aethestics of the rest of the chapel.\' This led the team to begin by measuring the current markers and the pews, researching available materials for prototyping, and conducting interviews with the Director of Facilities regarding the design language of the building and school branding.',
         image: getAssetPath('/IMG_4444.jpg'),
         imageAlt: 'Students conducting research in chapel',
@@ -143,7 +173,7 @@ export const projects: Project[] = [
       {
         type: 'split',
         title: 'To R, or not to R',
-        content: 'The team explored multiple design variables through sketching and physical prototyping. We tested different materials, fonts, and finishes to find the perfect balance between durability, readability, and aesthetic balance with the chapel\'s traditional architecture. During this stage, students learned how to design with vector-editing software (Inkscape), operate our lazer cutter, and practice feedback mechanisms such as dot-voting and user-interviews. The decision to exclude the \"R\" emblem originally proved contentios amongst the team, but user feedback revealed clear ambiguity as to whether this represented \"row,\" \"stage right,\" or \"house right,\" and so the team decided on a minimal design excluding the \"R\" in order to simplify the process for users.',
+        content: 'The team explored multiple design variables through sketching and physical prototyping. We tested different materials, fonts, and finishes to find the perfect balance between durability, readability, and aesthetic balance with the chapel\'s traditional architecture. During this stage, students learned how to design with vector-editing software (Inkscape), operate our lazer cutter, and practice feedback mechanisms such as dot-voting and user-interviews. The decision to exclude the "R" emblem originally proved contentios amongst the team, but user feedback revealed clear ambiguity as to whether this represented "row," "stage right," or "house right," and so the team decided on a minimal design excluding the "R" in order to simplify the process for users.',
         image: getAssetPath('/IMG_4536.jpg'),
         imageAlt: 'Student design prototypes',
         imagePosition: 'left'
@@ -151,7 +181,7 @@ export const projects: Project[] = [
       {
         type: 'text',
         title: 'Who (really) makes the decisions?',
-        content: 'After our best efforts as designers, we must, invariably, put our work forward for the judgement (and often the selctection) of others. Towards the end of the class project, we had the chance to meet again with the Director of Facilities, the Chair of Campus Operations (boardmember representative), and the Headmaster. This gave the students the chance to present their work to the stakeholders and learn to reconcile their designs and persoanl attatchments with \"client\" interests. The team placed various prototypes in situ then solicited feedback from these stakeholders to inform their final design.'
+        content: 'After our best efforts as designers, we must, invariably, put our work forward for the judgement (and often the selctection) of others. Towards the end of the class project, we had the chance to meet again with the Director of Facilities, the Chair of Campus Operations (boardmember representative), and the Headmaster. This gave the students the chance to present their work to the stakeholders and learn to reconcile their designs and persoanl attatchments with "client" interests. The team placed various prototypes in situ then solicited feedback from these stakeholders to inform their final design.'
       },
       {
         type: 'image',
@@ -178,7 +208,7 @@ export const projects: Project[] = [
         type: 'split',
         title: 'Legacy Impact',
         content: 'These chapel row markers represent more than functional plaques; they are the product of team-initative, user-centered design, and experiential learning. Every time the school community gathers in chapel, the team gets to see their work serving a real need. This project demonstrates how design education can create lasting value while teaching essential skills in creativity, problem-solving, and collaboration.',
-        image: getAssetPath('/IMG_5513_edited copy.jpg'),
+        image: getAssetPath('/chapel-row-markers-hero.jpg'),
         imageAlt: 'Chapel with installed row markers',
         imagePosition: 'left'
       }
@@ -291,7 +321,7 @@ export const projects: Project[] = [
     title: 'Cookbooks',
     subtitle: 'Stories Through Food & Photography',
     category: 'Photography & Publishing',
-    heroImage: getAssetPath('/untitled shoot-4815.jpg'),
+    heroImage: getAssetPath('/cookbooks-hero.jpg'),
     overview: '',
     role: 'Author, Photographer, Editor',
     duration: '6 months (Cooking in Quarantine), 3 months (From Mom\'s Kitchen)',

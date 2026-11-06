@@ -1,4 +1,5 @@
 const STEAM_ID = '76561198088720071';
+const OUTPUT_PATH = 'public/steam-games.json';
 
 function fail(message) {
   // The ::error:: prefix promotes this to GitHub Actions' Annotations panel,
@@ -30,15 +31,28 @@ async function main() {
       : null,
   }));
 
+  const { readFile, writeFile } = await import('node:fs/promises');
+
+  // Only rewrite the file when the games themselves changed. Otherwise the
+  // updatedAt timestamp alone would produce a commit on every scheduled run.
+  try {
+    const previous = JSON.parse(await readFile(OUTPUT_PATH, 'utf8'));
+    if (JSON.stringify(previous.games) === JSON.stringify(games)) {
+      console.log(`No change in recently played games; leaving ${OUTPUT_PATH} as is`);
+      return;
+    }
+  } catch {
+    // No previous file, or it isn't valid JSON: write a fresh one.
+  }
+
   const output = {
     games,
     updatedAt: new Date().toISOString(),
   };
 
-  const { writeFile } = await import('node:fs/promises');
-  await writeFile('public/steam-games.json', JSON.stringify(output, null, 2) + '\n');
+  await writeFile(OUTPUT_PATH, JSON.stringify(output, null, 2) + '\n');
 
-  console.log(`Wrote ${games.length} games to public/steam-games.json`);
+  console.log(`Wrote ${games.length} games to ${OUTPUT_PATH}`);
 }
 
 main().catch((error) => {

@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  actions: write # to start the deploy workflow below
 
 jobs:
   update:
@@ -25,7 +26,12 @@ jobs:
         env:
           STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
 
-      - name: Commit updated data
+      # Pushes made with GITHUB_TOKEN don't trigger other workflows, so the
+      # deploy workflow is started explicitly; otherwise the live site keeps
+      # serving old Steam data until the next manual push.
+      - name: Commit updated data and redeploy
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -35,4 +41,5 @@ jobs:
           else
             git commit -m "Update Steam games data"
             git push
+            gh workflow run deploy.yml --ref main
           fi

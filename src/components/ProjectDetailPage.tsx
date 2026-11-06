@@ -2,57 +2,21 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Clock, Users as UsersIcon, Target, User, FileText, Lightbulb, Wrench, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 import { getProjectById } from '../data/projectsData';
-import type { ProjectSection } from '../data/projectsData';
-
-interface TimelineItem {
-  id: string;
-  label: string;
-  IconComponent: React.ElementType;
-}
+import type { ProjectSection, Player } from '../data/projectsData';
 
 const ProjectDetailPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [activeSection, setActiveSection] = useState<string>('overview');
   const sectionRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   const project = id ? getProjectById(id) : undefined;
-
-  const timelineItems: TimelineItem[] = [
-    ...(project?.overview ? [{ id: 'overview', label: 'Overview', IconComponent: FileText }] : []),
-    ...(project?.outcome ? [{ id: 'outcome', label: 'Outcome', IconComponent: Target }] : []),
-    ...(project?.hcdPhases.theory ? [{ id: 'theory', label: 'Theory', IconComponent: FileText }] : []),
-    ...(project?.hcdPhases['cooking-in-quarantine'] ? [{ id: 'cooking-in-quarantine', label: 'Cooking in Quarantine', IconComponent: FileText }] : []),
-    ...(project?.hcdPhases['from-moms-kitchen'] ? [{ id: 'from-moms-kitchen', label: "From Mom's Kitchen", IconComponent: FileText }] : []),
-    ...(project?.hcdPhases['meet-the-players'] ? [{ id: 'meet-the-players', label: 'Meet the Players', IconComponent: User }] : []),
-    ...(project?.hcdPhases['explore-the-world'] ? [{ id: 'explore-the-world', label: 'Explore the World', IconComponent: FileText }] : []),
-    ...(project?.hcdPhases.user ? [{ id: 'user', label: 'User', IconComponent: User }] : []),
-    ...(project?.hcdPhases.define ? [{ id: 'define', label: 'Define', IconComponent: Target }] : []),
-    ...(project?.hcdPhases.ideate ? [{ id: 'ideate', label: 'Ideate', IconComponent: Lightbulb }] : []),
-    ...(project?.hcdPhases.prototype ? [{ id: 'prototype', label: 'Prototype', IconComponent: Wrench }] : []),
-    ...(project?.hcdPhases.test ? [{ id: 'test', label: 'Test', IconComponent: CheckCircle }] : []),
-    ...(project?.sections && project.sections.length > 0 ? [{ id: 'detailed-journey', label: 'Understanding The Journey', IconComponent: FileText }] : []),
-  ];
 
   useEffect(() => {
     const handleScroll = () => {
       const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
       const progress = (window.scrollY / totalHeight) * 100;
       setScrollProgress(progress);
-
-      const scrollPosition = window.scrollY + window.innerHeight / 3;
-
-      for (const item of timelineItems) {
-        const element = sectionRefs.current[item.id];
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(item.id);
-            break;
-          }
-        }
-      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -63,15 +27,6 @@ const ProjectDetailPage: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
-
-  const scrollToSection = (sectionId: string) => {
-    const element = sectionRefs.current[sectionId];
-    if (element) {
-      const yOffset = -80;
-      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  };
 
   if (!project) {
     return (
@@ -171,8 +126,8 @@ const ProjectDetailPage: React.FC = () => {
           </div>
         );
 
-      case 'video':
-        const isExternalVideo = section.video.startsWith('http');
+      case 'video': {
+        const isExternalVideo = (section.video ?? '').startsWith('http');
         return (
           <div key={index} className="w-full py-12">
             <div className="max-w-5xl mx-auto px-6">
@@ -214,6 +169,7 @@ const ProjectDetailPage: React.FC = () => {
             </div>
           </div>
         );
+      }
 
       case 'pdf':
         return (
@@ -445,10 +401,10 @@ const ProjectDetailPage: React.FC = () => {
                 </span>
               ))}
             </div>
-            {(project as any).headerQuote && (
+            {project.headerQuote && (
               <div className="mt-8 pt-6 border-t border-slate-gray/20">
                 <p className="text-lg text-slate-gray italic leading-relaxed">
-                  {(project as any).headerQuote}
+                  {project.headerQuote}
                 </p>
               </div>
             )}
@@ -583,7 +539,7 @@ const ImageCarousel: React.FC<{ images: Array<{ src: string; alt: string }> }> =
   );
 };
 
-const PlayerTabs: React.FC<{ players: Array<{ name: string; image: string; description: string }> }> = ({ players }) => {
+const PlayerTabs: React.FC<{ players: Player[] }> = ({ players }) => {
   const [activePlayer, setActivePlayer] = useState(0);
 
   if (!players || players.length === 0) return null;

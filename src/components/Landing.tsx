@@ -5,7 +5,6 @@ import { getAllProjects } from '../data/projectsData';
 const Landing: React.FC = () => {
   const [showHoverEffect, setShowHoverEffect] = useState(false);
   const [showContent, setShowContent] = useState(false);
-  const [hasVisitedBefore, setHasVisitedBefore] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const projects = getAllProjects();
@@ -16,7 +15,6 @@ const Landing: React.FC = () => {
     const isNavigatingBack = location.state?.fromNavigation;
 
     if (visited || isNavigatingBack) {
-      setHasVisitedBefore(true);
       setShowContent(true);
       setShowHoverEffect(true);
       return;

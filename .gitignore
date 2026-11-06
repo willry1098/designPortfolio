@@ -2,3 +2,6 @@ node_modules
 dist
 .env
 .DS_Store
+
+# Local symlink to the shared fact sheet in ../ryanResume (see CLAUDE.md section 7)
+01_Fact_Sheet.md
