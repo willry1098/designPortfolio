@@ -12,7 +12,20 @@
       "playtime_deck_forever": 0,
       "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/1086940/header.jpg",
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg"
+    },
+    {
+      "appid": 1426210,
+      "name": "It Takes Two",
+      "playtime_2weeks": 76,
+      "playtime_forever": 361,
+      "img_icon_url": "6b15f6d81c4fc52056f4928b363b7fac591a945b",
+      "playtime_windows_forever": 361,
+      "playtime_mac_forever": 0,
+      "playtime_linux_forever": 0,
+      "playtime_deck_forever": 0,
+      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/1426210/header.jpg",
+      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1426210/6b15f6d81c4fc52056f4928b363b7fac591a945b.jpg"
     }
   ],
-  "updatedAt": "2026-11-18T15:11:56.938Z"
+  "updatedAt": "2026-11-21T22:48:44.774Z"
 }
