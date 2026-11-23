@@ -27,6 +27,19 @@
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1426210/6b15f6d81c4fc52056f4928b363b7fac591a945b.jpg"
     },
     {
+      "appid": 920210,
+      "name": "LEGO® Star Wars™: The Skywalker Saga",
+      "playtime_2weeks": 37,
+      "playtime_forever": 2741,
+      "img_icon_url": "568a07f03f8dba0b74c4a02f6ebb43ce5e09075c",
+      "playtime_windows_forever": 2741,
+      "playtime_mac_forever": 0,
+      "playtime_linux_forever": 0,
+      "playtime_deck_forever": 0,
+      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/920210/header.jpg",
+      "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/920210/568a07f03f8dba0b74c4a02f6ebb43ce5e09075c.jpg"
+    },
+    {
       "appid": 231350,
       "name": "3DMark Demo",
       "playtime_2weeks": 5,
@@ -40,5 +53,5 @@
       "icon_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/231350/d3977ec7e73b44c208da4e2a010156d9efd30f0b.jpg"
     }
   ],
-  "updatedAt": "2026-11-22T23:17:28.183Z"
+  "updatedAt": "2026-11-23T05:59:47.017Z"
 }
